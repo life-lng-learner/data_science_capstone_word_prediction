@@ -35,10 +35,10 @@ The core of the prediction model is based on the stupid back-off algorithm (http
 5. The next predicted word is the word in the list with the highest probability.
 
 ## The Prediction Tool (Shiny App)
-The Prediction tool provides instructions at the top followed by input box to enter phrase. Once phrase is entered the next word is displayed with a table of the top 5 predicted words. A screen shot of the app is show below:  
+The Prediction tool provides instructions at the top followed by input box to enter phrase in the Next Predicted Word tab. Once phrase is entered the next word is displayed. A table of the top 5 predicted words is also displayed in the Top 5 Predicted Words tab. A screen shot of the app is show below:  
 
 <center>
-![](./images/shiny_app_screenshot.jpg){width=60%}
+![](./images/shiny_app_screenshot.jpg){width=80%}
 </center>
 
 ## Resources
@@ -47,7 +47,7 @@ Data Source:  https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera
 
 Algorithm Details (Stupid Backoff): https://www.aclweb.org/anthology/D07-1090.pdf
 
-Application Source Code: 
+Application Source Code: https://github.com/life-lng-learner/data_science_capstone_word_prediction
 
 Shiny App: 
 

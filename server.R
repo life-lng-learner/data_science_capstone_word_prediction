@@ -44,7 +44,8 @@ shinyServer(function(input, output) {
         
         #Call the predict_next_prob function from ngram-prediction-model.R file
         #to fill up the list of predicted words
-        predict_next_prob(input_words)
+        return(predict_next_prob(input_words))
+        
         
     })
     
@@ -76,7 +77,7 @@ shinyServer(function(input, output) {
     })
     
     #Return a table of top 5 predicted words
-    output$word_list<-renderDataTable({
+    output$word_list<-DT::renderDataTable({
         
         next_word_list<-req(list_of_predicted_words())
         if(nrow(next_word_list)!=0){
@@ -89,11 +90,11 @@ shinyServer(function(input, output) {
     #Send instructions to the user
     output$instructions<-renderText({
         paste("<b>Instructions</b>","<br>","<br>",
-              "1. Please enter your phrase in the box at the bottom","<br>","<br>",
+              "1. Please enter your phrase in the box at the bottom in the Next Predicted Word tab","<br>","<br>",
               "2. Once you are done entering click outside the box the tool will calculate the next word","<br>","<br>",
               "3. The next word will be displayed besides \"Next word is:\". It may take a few seconds for the next word to be displayed ","<br>","<br>",
-              "4. After this a list of top 5 predicted words will also be displayed","<br>","<br>",
-              "5. If the tool cannot predict the next word, a message \"Cannot predict the next word. Please check existing phrase or enter more words")
+              "4. After this a list of top 5 predicted words will also be displayed in the Top 5 Predicted Words tab","<br>","<br>",
+              "5. If the tool cannot predict the next word, a message will be displayed \"Cannot predict the next word. Please check existing phrase or enter more words")
     })
 
 })

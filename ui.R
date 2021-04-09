@@ -27,18 +27,17 @@ shinyUI(fluidPage(
             htmlOutput("instructions"),width=6
         ),
 
-        # Main panel - input box for the user to enter the phrase, output the next predicted
-        # word and display a list of top 5 predicted words
+        # Main panel - input box for the user to enter the phrase and output the next predicted
+        # word in one tab and a display of list of top 5 predicted words in another tab.
         mainPanel(
             
-            #Input box for the user to enter the phrase
-            textInput("input_phrase","Enter the phrase",""),
+            tabsetPanel(
+              tabPanel("Next Predicted Word",textInput("input_phrase","Enter the phrase",""),htmlOutput("next_word")),
+              tabPanel("Top 5 Predicted Words",dataTableOutput("word_list"))
+            ),
             
-            #Output the next predicted word.
-            htmlOutput("next_word"),
-            
-            #Output a list of next predicted words
-            dataTableOutput("word_list")
         )
+        
+        
     )
 ))
