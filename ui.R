@@ -14,6 +14,7 @@
 ####################################################################################
 
 library(shiny)
+library(DT)
 
 # Define UI logic for the prediction tool
 shinyUI(fluidPage(
@@ -27,14 +28,13 @@ shinyUI(fluidPage(
             htmlOutput("instructions"),width=6
         ),
 
-        # Main panel - input box for the user to enter the phrase and output the next predicted
-        # word in one tab and a display of list of top 5 predicted words in another tab.
+        # Main panel - input box for the user to enter the phrase, output the next predicted
+        # word and a display of list of top 5 predicted words.
         mainPanel(
-            
-            tabsetPanel(
-              tabPanel("Next Predicted Word",textInput("input_phrase","Enter the phrase",""),htmlOutput("next_word")),
-              tabPanel("Top 5 Predicted Words",dataTableOutput("word_list"))
-            ),
+
+            textInput("input_phrase","Enter the phrase",""),
+            htmlOutput("next_word"),
+            DT::dataTableOutput("word_list")
             
         )
         

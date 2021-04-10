@@ -3,13 +3,14 @@ title: "Next Word Prediction Tool"
 author: "PD"
 date: "26/04/2021"
 output: ioslides_presentation
+logo: WordQ5.png
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Word Prediction Tool Overview
+## Word Prediction Tool Overview {data-background=#ADD8E6}
 
 A word prediction tool has been developed that takes a phrase as an input and outputs the next word. The tool has been developed keeping in mind execution efficiency and accuracy.
 
@@ -21,7 +22,7 @@ The presentation contains the following:
 
 3. Links to shiny app, its source code and this presentation  
 
-## The Prediction Algorithm
+## The Prediction Algorithm {data-background=#ADD8E6}
 The core of the prediction model is based on the stupid back-off algorithm (https://www.aclweb.org/anthology/D07-1090.pdf). The key steps of the prediction model are:  
 
 1. Take a sample of the data set downloaded from the swiftkey dataset (5% of data)  
@@ -34,14 +35,14 @@ The core of the prediction model is based on the stupid back-off algorithm (http
 
 5. The next predicted word is the word in the list with the highest probability.
 
-## The Prediction Tool (Shiny App)
-The Prediction tool provides instructions at the top followed by input box to enter phrase in the Next Predicted Word tab. Once phrase is entered the next word is displayed. A table of the top 5 predicted words is also displayed in the Top 5 Predicted Words tab. A screen shot of the app is show below:  
+## The Prediction Tool (Shiny App) {data-background=#ADD8E6}
+The Prediction tool provides instructions at the top followed by input box to enter phrase. Once phrase is entered the next word is displayed. A table of the top 5 predicted words is also displayed at the bottom. A screen shot of the app is show below:  
 
 <center>
-![](./images/shiny_app_screenshot.jpg){width=80%}
+![](./images/shiny_app_screenshot.jpg){width=50%}
 </center>
 
-## Resources
+## Resources {data-background=#ADD8E6}
 
 Data Source:  https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip","Coursera-SwiftKey.zip
 
@@ -49,6 +50,6 @@ Algorithm Details (Stupid Backoff): https://www.aclweb.org/anthology/D07-1090.pd
 
 Application Source Code: https://github.com/life-lng-learner/data_science_capstone_word_prediction
 
-Shiny App: 
+Shiny App: https://lifelnglearner.shinyapps.io/next_word_prediction/
 
 Presentation: 

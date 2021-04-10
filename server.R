@@ -14,6 +14,7 @@
 ####################################################################################
 
 library(shiny)
+library(DT)
 
 #Load the prediction model as function from this file will be used to predict the 
 #next 5 words based on the input phrase
@@ -85,15 +86,15 @@ shinyServer(function(input, output) {
             next_word_list[1]
         }
         
-    },options = list(dom='t',ordering=FALSE,autoWidth=TRUE,columnDefs=list(list(width='30%',className='dt-center',targets=0))), rownames = FALSE, colnames=c("Predicted Words"), caption='Table: List of Top 5 Predicted Words based on decreasing probability')
+    },options = list(dom='t',ordering=FALSE,autoWidth=TRUE,columnDefs=list(list(width='30%',className='dt-center',targets=0))), rownames = FALSE, colnames=c("Predicted Words"), caption='Table: List of Top 5 Predicted Words based on decreasing probability',extensions='Responsive')
     
     #Send instructions to the user
     output$instructions<-renderText({
         paste("<b>Instructions</b>","<br>","<br>",
-              "1. Please enter your phrase in the box at the bottom in the Next Predicted Word tab","<br>","<br>",
+              "1. Please enter your phrase in the box at the bottom","<br>","<br>",
               "2. Once you are done entering click outside the box the tool will calculate the next word","<br>","<br>",
               "3. The next word will be displayed besides \"Next word is:\". It may take a few seconds for the next word to be displayed ","<br>","<br>",
-              "4. After this a list of top 5 predicted words will also be displayed in the Top 5 Predicted Words tab","<br>","<br>",
+              "4. After this a list of top 5 predicted words will also be displayed","<br>","<br>",
               "5. If the tool cannot predict the next word, a message will be displayed \"Cannot predict the next word. Please check existing phrase or enter more words")
     })
 

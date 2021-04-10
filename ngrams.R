@@ -76,12 +76,6 @@ sample_data_clean<-tolower(sample_data_clean)
 #Remove Numbers
 sample_data_clean<-str_replace_all(sample_data_clean,"[[:digit:]]+","")
 
-#Remove special characters
-sample_data_clean<-str_replace_all(sample_data_clean,"â","")
-sample_data_clean<-str_replace_all(sample_data_clean,"T","")
-sample_data_clean<-str_replace_all(sample_data_clean,"o","")
-sample_data_clean<-str_replace_all(sample_data_clean,"®","")
-
 #Convert clean data sample to data frame
 sample_data_clean<-data_frame(text=sample_data_clean)
 
