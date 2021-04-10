@@ -52,4 +52,4 @@ Application Source Code: https://github.com/life-lng-learner/data_science_capsto
 
 Shiny App: https://lifelnglearner.shinyapps.io/next_word_prediction/
 
-Presentation: 
+Presentation: https://rpubs.com/pdhrona/ds-capstone-presentation
