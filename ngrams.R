@@ -5,7 +5,7 @@
 ## and twitter data. After data is cleaned it is broken in n-grams (from unigram to 
 ## pentagram). First few thousand rows of the n-grams are saved in their respective
 ## files to be read later by the prediction model.
-##Date: 04/26/2021
+##Date: 04/12/2021
 ####################################################################################
 
 # Install required libraries if not already installed

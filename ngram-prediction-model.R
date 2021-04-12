@@ -6,7 +6,7 @@
 ## n-grams to predict the next word for the phrase entered by the user. This model/
 ## algorithm will be the core part of the user facing shiny app. The stupid back-off
 ## algorithm is used to predict the next word.
-##Date: 04/26/2021
+##Date: 04/12/2021
 ####################################################################################
 
 # Install required libraries if not already installed
