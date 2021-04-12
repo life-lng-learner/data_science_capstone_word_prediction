@@ -89,25 +89,25 @@ pentagram_data<-sample_data_clean %>% unnest_tokens(pentagram,text,token="ngrams
 
 ##Assign frequencies to the n-grams, remove NAs and filter the first x rows
 
-#Unigram - filter the first 20k rows
+#Unigram - filter the first 15k rows
 unigram_freq_filter_data<-arrange(filter(count(unigram_data,unigram),!is.na(unigram)),desc(n))
-unigram_freq_filter_data<-head(unigram_freq_filter_data,20000)
+unigram_freq_filter_data<-head(unigram_freq_filter_data,15000)
 
-#Bigram - filter the first 20k rows
+#Bigram - filter the first 15k rows
 bigram_freq_filter_data<-arrange(filter(count(bigram_data,bigram),!is.na(bigram)),desc(n))
-bigram_freq_filter_data<-head(bigram_freq_filter_data,20000)
+bigram_freq_filter_data<-head(bigram_freq_filter_data,15000)
 
-#Trigram - filter the first 17k rows
+#Trigram - filter the first 12k rows
 trigram_freq_filter_data<-arrange(filter(count(trigram_data,trigram),!is.na(trigram)),desc(n))
-trigram_freq_filter_data<-head(trigram_freq_filter_data,17000)
+trigram_freq_filter_data<-head(trigram_freq_filter_data,12000)
 
-#Quadgram - filter the first 15k rows
+#Quadgram - filter the first 10k rows
 quadgram_freq_filter_data<-arrange(filter(count(quadgram_data,quadgram),!is.na(quadgram)),desc(n))
-quadgram_freq_filter_data<-head(quadgram_freq_filter_data,15000)
+quadgram_freq_filter_data<-head(quadgram_freq_filter_data,10000)
 
-#Pentagram - filter the first 12k rows
+#Pentagram - filter the first 10k rows
 pentagram_freq_filter_data<-arrange(filter(count(pentagram_data,pentagram),!is.na(pentagram)),desc(n))
-pentagram_freq_filter_data<-head(pentagram_freq_filter_data,12000)
+pentagram_freq_filter_data<-head(pentagram_freq_filter_data,10000)
 
 #Rename column for unigram
 unigram_words<-rename(unigram_freq_filter_data,w1=unigram,freq=n)
